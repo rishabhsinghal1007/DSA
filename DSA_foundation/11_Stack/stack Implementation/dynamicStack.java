@@ -2,24 +2,20 @@ public class dynamicStack extends stackClass{
     
     public dynamicStack(){
         super();
-        // this.capacity = 10;
-        // initializeVariables();
     } 
 
     public dynamicStack(int size){
         super(size);
-        // this.capacity = size;
-        // super.initializeVariables();
     }
-    // array provide kray aur array convert into stack ...
+
     public dynamicStack(int[] arr){
         super.capacity = arr.length;
-        super.initializeVariables(arr.length);
+        super.initializeVariables(2 * arr.length);
 
         for(int ele : arr)
             super.push_(ele);
     }
-
+        // new function 
     // protected void push_(int data){
     //     if(super.capacity == super.elementCount){ // check my stack is overflow or not
     //         int[] temp = super.arr; // copy all data
@@ -28,7 +24,7 @@ public class dynamicStack extends stackClass{
     //             super.push_(ele);
     //     }
 
-    //     super.push_(data);   // add data jiski vjah se size overflow hua tha
+    //     super.push_(data);   
     // }
 
     // public void push(int data){
