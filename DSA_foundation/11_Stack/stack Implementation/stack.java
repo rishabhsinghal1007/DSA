@@ -30,6 +30,19 @@ public class stack{
         return this.elementCount == 0 ;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < this.elementCount; i++) {
+            sb.append(this.arr[i]);
+            if (i != this.elementCount - 1)
+                sb.append(", ");
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
 
     //  Exceptions . =======================================================================
 
