@@ -71,7 +71,7 @@ public class queueClass{
             throw new Exception("StackIsEmpty");
     }
 
-    // Stack functions. =======================================================================
+    // Queue functions. =======================================================================
 
     protected void push_(int data) {
        this.arr[this.back] = data;

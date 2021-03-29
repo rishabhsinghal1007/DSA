@@ -19,6 +19,7 @@ public class dynamicQueue extends queueClass{
     public void push(int data) throws Exception{
         if(super.capacity == super.elementCount){
             int[] temp = new int[super.capacity];
+            
             for(int i = 0 ; i < super.capacity ; i++){
                 int idx = (super.front + i) % super.capacity;
                 temp[i] = super.arr[idx];
