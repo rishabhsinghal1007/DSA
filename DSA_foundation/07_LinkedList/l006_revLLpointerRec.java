@@ -1,3 +1,4 @@
+public class 
 private void reversePRHelper(Node node) {
     if (node.next == null) {
         Node temp = head;

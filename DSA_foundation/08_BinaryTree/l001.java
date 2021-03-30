@@ -160,10 +160,4 @@ public class l001{
         printAtDepthK(root.left , block , k-1 , ans);
         printAtDepthK(root.right , block , k-1 , ans);
     }
-
-    public static void 
-
-
 }
-
-
