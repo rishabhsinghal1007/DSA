@@ -56,6 +56,6 @@ public class largestArea{
         for(int i = 0; i < n; i++){
             a[i] = Integer.parseInt(br.readLine());
         }
-        System.out.println("Area is : " + largestRectangleArea(a));
+        System.out.println("The Area is : " + largestRectangleArea(a));
     }
 }
