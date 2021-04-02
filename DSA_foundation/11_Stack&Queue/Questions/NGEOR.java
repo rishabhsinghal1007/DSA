@@ -34,7 +34,7 @@ public class NGEOR{
         for(int i = 0; i < n; i++){
             a[i] = Integer.parseInt(br.readLine());
         }
-        System.out.println()
+        System.out.println();
         int[] nge = NGOR(a);
         display(nge);
     }
