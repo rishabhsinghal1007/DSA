@@ -84,7 +84,7 @@ public class topKFreq{
         System.out.print("Enter k -> ");
         int k = Integer.parseInt(br.readLine());
         System.out.println("The top k frequent elements are  ");
-        int[] top = topKFrequentElements(arr,k);
-        print(top);
+        int[] ans = topKFrequentElements(arr,k);
+        print(ans);
     }
 }
