@@ -1,3 +1,6 @@
+// Kth Largest Element in an Array
+// Given an integer array nums and an integer k, return the kth largest element in the array.
+
 import java.io.*;
 import java.util.*;
 
@@ -37,5 +40,12 @@ public class Q215_kthLargest{
             k--;
         }
         return nums[0];
+    }
+
+    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
+        int[] arr = {3,2,3,1,2,4,5,6};
+        int k = scn.nextInt();
+        System.out.println(findKthLargest(arr,k));
     }
 }
