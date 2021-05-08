@@ -40,6 +40,16 @@ public class friends_pairing {
         return dp[N];
     }
 
+    public static int friendsPairing_Opti(int n) {
+        int a = 1, b = 1;
+        for (int i = 2; i <= n; i++) {
+            int sum = b + a * (i - 1);
+            a = b;
+            b = sum;
+        }
+        return b;
+    }
+
     public static void friendsPairing() {
         int n = 5;
         int[] dp = new int[n + 1];
@@ -48,6 +58,7 @@ public class friends_pairing {
         System.out.println(friendsPairing_DP(n, dp));
 
         print(dp);
+        System.out.println(friendsPairing_Opti(n));
     }
 
     public static void main(String[] args) throws Exception {
