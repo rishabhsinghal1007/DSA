@@ -25,10 +25,10 @@ public class l001Basic {
     }
 
     public static void display() {
-        for (int i = 0; i < N; i++) {// hr edge pr traverse kra
+        for (int i = 0; i < N; i++) {
             System.out.print(i + " -> ");
 
-            for (Edge e : graph[i]) { // graph[i] gives u ArrayList of Edge which contains u & w
+            for (Edge e : graph[i]) { 
                 System.out.print(e);
             }
             System.out.println();
