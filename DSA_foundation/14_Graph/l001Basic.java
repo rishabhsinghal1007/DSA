@@ -28,7 +28,7 @@ public class l001Basic {
         for (int i = 0; i < N; i++) {
             System.out.print(i + " -> ");
 
-            for (Edge e : graph[i]) { 
+            for (Edge e : graph[i]) {
                 System.out.print(e);
             }
             System.out.println();
@@ -64,6 +64,28 @@ public class l001Basic {
             Edge e = graph[u].get(n - 1);
             removeEdge(u, e.v);
         }
+    }
+
+    public static void printPreOrder(int src, boolean[] vis, String ans, int wsf) {
+        System.out.println(src + " -> " + ans + src + " @ " + wsf);
+        vis[src] = true;
+        for (Edge e : graph[src]) {
+            if (!vis[e.v])
+                printPreOrder(e.v, vis, ans + src, wsf + e.w);
+        }
+
+        vis[src] = false;
+    }
+
+    public static void printPostOrder(int src, boolean[] vis, String ans, int wsf) {
+        vis[src] = true;
+        for (Edge e : graph[src]) {
+            if (!vis[e.v])
+                printPostOrder(e.v, vis, ans + src, wsf + e.w);
+        }
+
+        System.out.println(src + " -> " + ans + src + " @ " + wsf);
+        vis[src] = false;
     }
 
     public static void main(String[] args) {
