@@ -1,8 +1,7 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
-public class reverse{
-   public static Scanner scn = new Scanner(System.in);
+public class reverse {
+    public static Scanner scn = new Scanner(System.in);
 
     public static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
@@ -15,6 +14,7 @@ public class reverse{
             swap(arr, si++, ei--);
         }
     }
+
     public static void display(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");

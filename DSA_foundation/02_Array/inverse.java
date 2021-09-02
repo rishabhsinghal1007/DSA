@@ -1,7 +1,6 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
-public class inverse{
+public class inverse {
     public static Scanner scn = new Scanner(System.in);
 
     public static int[] Inverse(int[] arr) {
@@ -19,6 +18,7 @@ public class inverse{
             arr[i] = scn.nextInt();
         }
     }
+
     public static void display(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + "\n");

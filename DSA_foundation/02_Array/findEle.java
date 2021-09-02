@@ -1,8 +1,7 @@
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class findEle {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
 
         int n = scn.nextInt();
@@ -21,5 +20,6 @@ public class findEle {
             }
         }
         System.out.println(idx);
+        scn.close();
     }
 }
