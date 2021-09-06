@@ -1,32 +1,23 @@
+// https://www.hackerrank.com/challenges/simple-array-sum/problem
 import java.io.*;
 import java.math.*;
 import java.security.*;
 import java.text.*;
 import java.util.*;
 import java.util.concurrent.*;
-import java.util.function.*;
 import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
 
 class Result {
-
-    /*
-     * Complete the 'aVeryBigSum' function below.
-     *
-     * The function is expected to return a LONG_INTEGER. The function accepts
-     * LONG_INTEGER_ARRAY ar as parameter.
-     */
-
-    public static long aVeryBigSum(List<Long> ar) {
+    
+    public static int simpleArraySum(List<Integer> ar) {
         // Write your code here
-        long sum = 0;
+        int sum = 0;
         for (int i = 0; i < ar.size(); i++) {
             sum += ar.get(i);
         }
         return sum;
     }
+
 }
 
 public class Solution {
@@ -36,10 +27,16 @@ public class Solution {
 
         int arCount = Integer.parseInt(bufferedReader.readLine().trim());
 
-        List<Long> ar = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" ")).map(Long::parseLong)
-                .collect(toList());
+        String[] arTemp = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
-        long result = Result.aVeryBigSum(ar);
+        List<Integer> ar = new ArrayList<>();
+
+        for (int i = 0; i < arCount; i++) {
+            int arItem = Integer.parseInt(arTemp[i]);
+            ar.add(arItem);
+        }
+
+        int result = Result.simpleArraySum(ar);
 
         bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();

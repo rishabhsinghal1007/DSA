@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/challenges/a-very-big-sum/problem
+
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -11,23 +13,15 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 class Result {
-
-    /*
-     * Complete the 'simpleArraySum' function below.
-     *
-     * The function is expected to return an INTEGER. The function accepts
-     * INTEGER_ARRAY ar as parameter.
-     */
-
-    public static int simpleArraySum(List<Integer> ar) {
+    
+    public static long aVeryBigSum(List<Long> ar) {
         // Write your code here
-        int sum = 0;
+        long sum = 0;
         for (int i = 0; i < ar.size(); i++) {
             sum += ar.get(i);
         }
         return sum;
     }
-
 }
 
 public class Solution {
@@ -37,10 +31,16 @@ public class Solution {
 
         int arCount = Integer.parseInt(bufferedReader.readLine().trim());
 
-        List<Integer> ar = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-                .map(Integer::parseInt).collect(toList());
+        String[] arTemp = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
-        int result = Result.simpleArraySum(ar);
+        List<Long> ar = new ArrayList<>();
+
+        for (int i = 0; i < arCount; i++) {
+            long arItem = Long.parseLong(arTemp[i]);
+            ar.add(arItem);
+        }
+
+        long result = Result.aVeryBigSum(ar);
 
         bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();
